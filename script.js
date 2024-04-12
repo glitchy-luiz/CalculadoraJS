@@ -24,8 +24,11 @@ function multiplicar(){
 function dividir(){
     var n1 = parseInt(document.getElementById('numero1').value)
     var n2 = parseInt(document.getElementById('numero2').value)
-    var divi = n1 / n2
-    resultado.innerHTML = divi
+    if (n2 == 0){
+        document.getElementById('resultado').innerHTML = "Impossivel dividir por zero!"
+    } else {
+        resultado.innerHTML = n1 / n2
+    }
 }
 
 function surpresa(){
